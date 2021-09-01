@@ -92,7 +92,7 @@ namespace SpeedandReachFixes
                 var weapon = state.PatchMod.Weapons.GetOrAddAsOverride(weap);
                 
                 if (weapon.Name != null && weapon.Name.TryLookup(Language.French, out string i18nWeaponName)) {
-                    weapon.Name = Encoding.GetEncoding("ISO-8859-1").GetString(Encoding.UTF8.GetBytes(i18nWeaponName));
+                    weapon.Name = i18nWeaponName;
                 }
 
                 Program.AdjustWeaponReach(weapon);
