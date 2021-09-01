@@ -73,8 +73,8 @@ namespace SpeedandReachFixes
                     if (modifiedRace.Name != null && modifiedRace.Name.TryLookup(Language.French, out string i18nRaceName)) {
                         modifiedRace.Name = Encoding.GetEncoding("ISO-8859-1").GetString(Encoding.UTF8.GetBytes(i18nRaceName));
                     }
-                    if (modifiedRace.Description != null && modifiedRace.Description.TryLookup(Language.French, out string i18nRaceName)) {
-                        modifiedRace.Description = Encoding.GetEncoding("ISO-8859-1").GetString(Encoding.UTF8.GetBytes(i18nRaceName));
+                    if (modifiedRace.Description != null && modifiedRace.Description.TryLookup(Language.French, out string i18nRaceDescription)) {
+                        modifiedRace.Description = Encoding.GetEncoding("ISO-8859-1").GetString(Encoding.UTF8.GetBytes(i18nRaceDescription));
                     }
                     
                     foreach (var attack in modifiedRace.Attacks)
