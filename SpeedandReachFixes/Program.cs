@@ -7,6 +7,7 @@ using Noggog;
 using System.Threading.Tasks;
 using Mutagen.Bethesda.FormKeys.SkyrimSE;
 using System;
+using System.Text;
 
 namespace SpeedandReachFixes
 {
@@ -69,6 +70,13 @@ namespace SpeedandReachFixes
 
                     var modifiedRace = state.PatchMod.Races.GetOrAddAsOverride(race);
 
+                    if (modifiedRace.Name != null && modifiedRace.Name.TryLookup(Language.French, out string i18nRaceName)) {
+                        modifiedRace.Name = i18nRaceName;
+                    }
+                    if (modifiedRace.Description != null && modifiedRace.Description.TryLookup(Language.French, out string i18nRaceDescription)) {
+                        modifiedRace.Description = i18nRaceDescription;
+                    }
+                    
                     foreach (var attack in modifiedRace.Attacks)
                     {
                         if (attack.AttackData == null) continue;
@@ -82,6 +90,10 @@ namespace SpeedandReachFixes
                 if (weap.Data == null) continue;
 
                 var weapon = state.PatchMod.Weapons.GetOrAddAsOverride(weap);
+                
+                if (weapon.Name != null && weapon.Name.TryLookup(Language.French, out string i18nWeaponName)) {
+                    weapon.Name = i18nWeaponName;
+                }
 
                 Program.AdjustWeaponReach(weapon);
                 Program.AdjustWeaponSpeed(weapon);
