@@ -14,19 +14,20 @@ namespace SpeedandReachFixes.GMST
     public class GameSettingsWeaponTypeReach
     {
         [MaintainOrder]
-        [Tooltip("Enables this category. It is highly recommended that you leave this enabled!")]
+        [SettingName("Activé")]
+        [Tooltip("Active cette catégorie. Il est fortement recommandé de laisser cette option activée !")]
         public bool Enabled = true;
 
-        [SettingName("fObjectHitWeaponReach")]
-        [Tooltip("Modifier added to the reach of one-handed weapons.")]
+        [SettingName("Portée des armes à une main")]
+        [Tooltip("Valeur ajoutée à la portée des armes à une main.")]
         public float fObjectHitWeaponReach = 81F;
 
-        [SettingName("fObjectHitTwoHandReach")]
-        [Tooltip("Modifier added to the reach of two-handed weapons.")]
+        [SettingName("Portée des armes à deux mains")]
+        [Tooltip("Valeur ajouté à la portée des armes à deux mains.")]
         public float fObjectHitTwoHandReach = 135F;
 
-        [SettingName("fObjectHitH2HReach")]
-        [Tooltip("Modifier added to unarmed reach.")]
+        [SettingName("Portée à mains nues")]
+        [Tooltip("Valeur ajouté à la portée à mains nues.")]
         public float fObjectHitH2HReach = 61F;
 
         // Adds the game settings from this class to the current patcher state
