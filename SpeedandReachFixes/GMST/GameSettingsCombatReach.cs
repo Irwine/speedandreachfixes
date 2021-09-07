@@ -20,7 +20,7 @@ namespace SpeedandReachFixes.GMST
         public float fCombatDistance = 141F;
 
         [SettingName("Portée des coups")]
-        [Tooltip("Le multiplicateur de portée de base utilisé pour les attaques de type "coup de bouclier".")]
+        [Tooltip("Le multiplicateur de portée de base utilisé pour les attaques de type coup de bouclier.")]
         public float fCombatBashReach = 61F;
 
         public int AddGameSettings(IPatcherState<ISkyrimMod, ISkyrimModGetter> state)
