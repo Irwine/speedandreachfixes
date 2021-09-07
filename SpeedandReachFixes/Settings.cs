@@ -28,7 +28,7 @@ namespace SpeedandReachFixes
 
         // List of WeaponStats objects, each relating to a different weapon keyword.
         [SettingName("Groupes d'armes")]
-        [Tooltip("Modifiez les caractéristiques de chaque groupe d'armes.")]
+        [Tooltip("Modifier les caractéristiques de chaque groupe d'armes.")]
         public List<WeaponStats> WeaponStats { get; set; } = new()
         {
             new WeaponStats(1, false, Skyrim.Keyword.WeapTypeBattleaxe, 0.666667F, 0.8275F),
