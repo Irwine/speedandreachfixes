@@ -40,7 +40,13 @@ namespace SpeedandReachFixes
                         continue; // skip this race if it does not have the ActorTypeNPC keyword
 
                     var raceCopy = race.DeepCopy();
-
+                    
+                    if (raceCopy.Name != null && raceCopy.Name.TryLookup(Language.French, out string i18nRaceName)) {
+                        raceCopy.Name = i18nRaceName;
+                    }
+                    if (raceCopy.Description != null && raceCopy.Description.TryLookup(Language.French, out string i18nRaceDescription)) {
+                        raceCopy.Description = i18nRaceDescription;
+                    }
                     var subrecordChanges = count;
                     foreach (var attack in raceCopy.Attacks)
                     {
@@ -65,7 +71,11 @@ namespace SpeedandReachFixes
                     continue;
 
                 var weapon = weap.DeepCopy(); // copy weap record to temp
-
+                
+                if (weapon.Name != null && weapon.Name.TryLookup(Language.French, out string i18nWeaponName)) {
+                    weapon.Name = i18nWeaponName;
+                }
+                
                 if (Settings.ApplyChangesToWeapon(weapon))
                 { // if temp record was modified
                     state.PatchMod.Weapons.Set(weapon); // set weap record to temp
