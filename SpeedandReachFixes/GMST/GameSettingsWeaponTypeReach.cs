@@ -14,7 +14,7 @@ namespace SpeedandReachFixes.GMST
     public class GameSettingsWeaponTypeReach
     {
         [MaintainOrder]
-        [SettingName("Activé")]
+        //[SettingName("Activé")]
         [Tooltip("Active cette catégorie. Il est fortement recommandé de laisser cette option activée !")]
         public bool Enabled = true;
 
