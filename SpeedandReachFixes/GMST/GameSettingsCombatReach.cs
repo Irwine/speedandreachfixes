@@ -10,16 +10,17 @@ namespace SpeedandReachFixes.GMST
     public class GameSettingsCombatReach
     {
         [MaintainOrder]
-
-        [Tooltip("Enables this category. It is highly recommended that you leave this enabled!")]
+        
+        [SettingName("Activé")]
+        [Tooltip("Active cette catégorie. Il est fortement recommandé de laisser cette option activée !")]
         public bool Enabled = true;
 
-        [SettingName("fCombatDistance")]
-        [Tooltip("The base reach multiplier used for all attacks, except for shield bashes.")]
+        [SettingName("Distance de combat")]
+        [Tooltip("Le multiplicateur de portée de base utilisé pour toutes les attaques, à l'exception des coups de bouclier.")]
         public float fCombatDistance = 141F;
 
-        [SettingName("fCombatBashReach")]
-        [Tooltip("The base reach multiplier used for shield bash attacks.")]
+        [SettingName("Portée des coups")]
+        [Tooltip("Le multiplicateur de portée de base utilisé pour les attaques de type "coup de bouclier".")]
         public float fCombatBashReach = 61F;
 
         public int AddGameSettings(IPatcherState<ISkyrimMod, ISkyrimModGetter> state)
