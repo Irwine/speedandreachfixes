@@ -11,7 +11,7 @@ namespace SpeedandReachFixes.GMST
     {
         [MaintainOrder]
         // Combat reach
-        [SettingName("Multiplicateurs de la portée de base en combat.")]
+        [SettingName("Multiplicateur de la portée de base.")]
         [Tooltip("Formule de la portée de mêlée : ( reach = ( fCombatDistance | fCombatBashReach ) * NPCRaceScale * WeaponReach + ( fObjectHitWeaponReach | fObjectHitTwoHandReach | fObjectHitH2HReach ) )")]
         public GameSettingsCombatReach CombatReach = new();
         // Weapon type reach
