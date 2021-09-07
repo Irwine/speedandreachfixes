@@ -11,12 +11,12 @@ namespace SpeedandReachFixes.GMST
     {
         [MaintainOrder]
         // Combat reach
-        [SettingName("Base Combat Reach Multipliers")]
-        [Tooltip("Melee Reach Formula: ( reach = ( fCombatDistance | fCombatBashReach ) * NPCRaceScale * WeaponReach + ( fObjectHitWeaponReach | fObjectHitTwoHandReach | fObjectHitH2HReach ) )")]
+        [SettingName("Multiplicateurs de la portée de base en combat.")]
+        [Tooltip("Formule de la portée de mêlée : ( reach = ( fCombatDistance | fCombatBashReach ) * NPCRaceScale * WeaponReach + ( fObjectHitWeaponReach | fObjectHitTwoHandReach | fObjectHitH2HReach ) )")]
         public GameSettingsCombatReach CombatReach = new();
         // Weapon type reach
-        [SettingName("Weapon Type Reach Modifiers")]
-        [Tooltip("Melee Reach Formula: ( reach = ( fCombatDistance | fCombatBashReach ) * NPCRaceScale * WeaponReach + ( fObjectHitWeaponReach | fObjectHitTwoHandReach | fObjectHitH2HReach ) )")]
+        [SettingName("Modificateurs de la portée selon le type d'arme")]
+        [Tooltip("Formule de la portée de mêlée : ( reach = ( fCombatDistance | fCombatBashReach ) * NPCRaceScale * WeaponReach + ( fObjectHitWeaponReach | fObjectHitTwoHandReach | fObjectHitH2HReach ) )")]
         public GameSettingsWeaponTypeReach WeaponTypeReach = new();
 
         public int AddGameSettingsToPatch(IPatcherState<ISkyrimMod, ISkyrimModGetter> state)
