@@ -6,6 +6,7 @@ using Mutagen.Bethesda.Strings;
 using System;
 using System.Threading.Tasks;
 
+
 namespace SpeedandReachFixes
 {
     public static class Program
@@ -35,6 +36,7 @@ namespace SpeedandReachFixes
             // Apply attack angle modifier for all races, if the modifier isn't set to 0
             if (!Settings.AttackStrikeAngleModifier.Equals(0F))
             {
+
                 foreach (IRaceGetter race in state.LoadOrder.PriorityOrder.Race().WinningOverrides())
                 { // iterate through all races that have the ActorTypeNPC keyword.
                     if (!race.HasKeyword(Skyrim.Keyword.ActorTypeNPC) || race.EditorID == null)
@@ -50,6 +52,7 @@ namespace SpeedandReachFixes
                     }
                     var subrecordChanges = count;
                     foreach (var attack in raceCopy.Attacks)
+
                     {
                         if (attack.AttackData == null)
                             continue;
@@ -68,6 +71,7 @@ namespace SpeedandReachFixes
             // Apply speed and reach fixes to all weapons.
             foreach (var weap in state.LoadOrder.PriorityOrder.WinningOverrides<IWeaponGetter>())
             {
+
                 if (weap.Data == null || weap.EditorID == null)
                     continue;
 
