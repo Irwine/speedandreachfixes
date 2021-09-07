@@ -17,18 +17,18 @@ namespace SpeedandReachFixes
         [MaintainOrder]
 
         // Game Settings
-        [SettingName("Game Setting Changes")]
-        [Tooltip("Don't change these unless you know what you're doing!")]
+        [SettingName("Modifications des paramètres du jeu")]
+        [Tooltip("N'y touchez pas sauf si vous savez ce que vous faites !")]
         public GameSettings GameSettings = new();
 
         // Race Attack Angle
-        [SettingName("Experimental Race Strike Angle Modifier")]
-        [Tooltip("Changes the angle at which an NPC can be hit by an attack. This value is added to the current value for all attacks and races. Set to 0 to disable, or negative to subtract.")]
+        [SettingName("Modificateur expérimental de l'angle de frappe pour les races")]
+        [Tooltip("Modifie l'angle sous lequel un PNJ peut être touché par une attaque. Cette valeur est ajoutée à la valeur actuelle pour toutes les attaques et les races. Mettre à 0 pour désactiver, ou négatif pour soustraire.")]
         public float AttackStrikeAngleModifier = 7F;
 
         // List of WeaponStats objects, each relating to a different weapon keyword.
-        [SettingName("Weapon Groups")]
-        [Tooltip("Change the stats of each weapon group.")]
+        [SettingName("Groupes d'armes")]
+        [Tooltip("Modifiez les caractéristiques de chaque groupe d'armes.")]
         public List<WeaponStats> WeaponStats { get; set; } = new()
         {
             new WeaponStats(1, false, Skyrim.Keyword.WeapTypeBattleaxe, 0.666667F, 0.8275F),
