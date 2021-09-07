@@ -13,21 +13,25 @@ namespace SpeedandReachFixes.SettingObjects
     public class WeaponStats
     {
         [MaintainOrder]
-
-        [Tooltip("The keyword attached to this weapon type.")]
+        
+        [SettingName("Mot clé")]
+        [Tooltip("Le mot clé attaché à ce type d'arme.")]
         public FormLink<IKeywordGetter> Keyword;
 
-        [Tooltip("When multiple weapon types apply to the same category, the highest priority wins.")]
+        [SettingName("Priorité")]
+        [Tooltip("Lorsque plusieurs types d'armes s'appliquent à la même catégorie, la priorité la plus élevée l'emporte.")]
         public int Priority;
 
-        [SettingName("Is Additive Modifier")]
-        [Tooltip("When checked, adds the specified values rather than overwriting them. Negative values will subtract.")]
+        [SettingName("Est un modificateur additionnel.")]
+        [Tooltip("Lorsque cette case est cochée, ajoute les valeurs spécifiées plutôt que de les écraser. Les valeurs négatives seront soustraites.")]
         public bool IsAdditiveModifier;
 
-        [Tooltip("The range of this weapon. A modifier value of 0 means unchanged.")]
+        [SettingName("Portée")]
+        [Tooltip("La portée de cette arme. Une valeur de 0 signifie qu'elle est inchangée.")]
         public float Reach;
 
-        [Tooltip("The speed of this weapon. A modifier value of 0 means unchanged.")]
+        [SettingName("Vitesse")]
+        [Tooltip("La vitesse de cette arme. Une valeur de 0 signifie qu'elle est inchangée.")]
         public float Speed;
 
         // Default Constructor
